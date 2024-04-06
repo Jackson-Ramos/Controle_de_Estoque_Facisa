@@ -1,23 +1,29 @@
 package org.example.entities;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Objects;
 
 public class Produto {
 	
 	private String nome;
-	private Long codigo;
-	private Double preco;
-	private static List<Produto> produtoList = new ArrayList<>();
+	private String codigo;
+	private String preco;
 	
-	public Produto(String nome, Long codigo, Double preco) {
+	public Produto(String nome, String codigo, String preco) {
 		this.nome = nome;
 		this.codigo = codigo;
 		this.preco = preco;
 	}
 	
-	public Produto() {
+	public String getPreco() {
+		return preco;
+	}
+	
+	public void setPreco(String preco) {
+		this.preco = preco;
+	}
+	
+	public String getCodigo() {
+		return codigo;
 	}
 	
 	public String getNome() {
@@ -26,22 +32,6 @@ public class Produto {
 	
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-	
-	public Long getCodigo() {
-		return codigo;
-	}
-	
-//	public void setCodigo(Long codigo) {
-//		this.codigo = codigo;
-//	}
-	
-	public Double getPreco() {
-		return preco;
-	}
-	
-	public void setPreco(Double preco) {
-		this.preco = preco;
 	}
 	
 	@Override
@@ -59,10 +49,10 @@ public class Produto {
 	
 	@Override
 	public String toString() {
-		return "Produto{" +
-				"nome='" + nome + '\'' +
-				", codigo=" + codigo +
-				", preco=" + preco +
-				'}';
+		return "Produto\n" +
+				"nome: '" + nome + "\n" +
+				" codigo: " + codigo + "\n" +
+				" preco: " + preco + "\n";
 	}
 }
+

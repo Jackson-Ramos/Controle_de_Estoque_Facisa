@@ -1,5 +1,7 @@
 package org.example;
 
+import org.example.servico.ProdutoServico;
+
 import javax.swing.*;
 
 public class Main {
@@ -57,10 +59,15 @@ public class Main {
 							}
 							
 							case "1": {
+								String nome = JOptionPane.showInputDialog(null, "DIGITE O NOME DO PRODUTO");
+								String codigo = JOptionPane.showInputDialog(null, "DIGITE O CODIGO DO PRODUTO");
+								String preco = JOptionPane.showInputDialog(null, "DIGITE O PREÇO DO PRODUTO");
+								ProdutoServico.CadastraProdutoList(nome, codigo, preco);
 								break;
 							}
 							
 							case "2": {
+								ProdutoServico.listProduto();
 								break;
 							}
 							
