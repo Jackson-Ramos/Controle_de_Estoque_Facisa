@@ -62,6 +62,7 @@ public class ProdutoServico {
 			if (produto.getCodigo().equals(codigo)) {
 				produtoList.remove(i);
 				produtoRemovido = true;
+				JOptionPane.showMessageDialog(null, "Produto removido com sucesso!");
 				break;
 			}
 		}

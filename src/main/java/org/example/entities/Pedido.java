@@ -2,44 +2,42 @@ package org.example.entities;
 
 import javax.annotation.processing.Generated;
 import java.util.*;
+import java.util.concurrent.atomic.AtomicLong;
 
 public class Pedido {
-
+	
+	private static final AtomicLong codigoSequencial = new AtomicLong(0);
 	private Long codigo;
 	private List<Produto> pedidos;
 	private Double valorPedido;
-
-	private static final Set<Pedido> PEDIDOS = new HashSet<>();
-
-	public Pedido(Long codigo, List<Produto> pedidos, Double valorPedido) {
-		this.codigo = codigo;
+	
+	public Pedido(List<Produto> pedidos, Double valorPedido) {
+		this.codigo = codigoSequencial.incrementAndGet();
 		this.pedidos = pedidos;
 		this.valorPedido = valorPedido;
 	}
-
-	public Pedido() {
-	}
-
+	
+	// Getters e setters
 	public Long getCodigo() {
 		return codigo;
 	}
-
+	
 	public List<Produto> getPedidos() {
 		return pedidos;
 	}
-
+	
 	public void setPedidos(List<Produto> pedidos) {
 		this.pedidos = pedidos;
 	}
-
+	
 	public Double getValorPedido() {
 		return valorPedido;
 	}
-
+	
 	public void setValorPedido(Double valorPedido) {
 		this.valorPedido = valorPedido;
 	}
-
+	
 	@Override
 	public boolean equals(Object o) {
 		if (this == o)

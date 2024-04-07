@@ -81,6 +81,8 @@ public class Main {
 							}
 							
 							case "4": {
+								String codigo = JOptionPane.showInputDialog(null, "DIGITE O CÓDIGO DO PRODUTO A SER EDITADO");
+								ProdutoServico.removeProduto(codigo);
 								break;
 							}
 							
