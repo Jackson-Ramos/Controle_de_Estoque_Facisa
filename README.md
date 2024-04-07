@@ -1,6 +1,6 @@
 <div align="center">
   <img alt="Unifacisa" src="https://img.shields.io/badge/Unifacisa-00599C?style=for-the-badge&logo=java&logoColor=white">
-  <img alt="Java" src="https://img.shields.io/badge/java%2D%2523ED8B00.svg%3Fstyle%3Dfor%2Dthe%2Dbadge%26logo%3Dopenjdk%26logoColor%3Dwhite">
+  <img alt="Java" src="![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)">
 </div>
 
 # Unifacisa - Controle de Estoque 📲 
