@@ -11,7 +11,7 @@ public class Main {
 		while (ops != "0") {
 			
 			ops = JOptionPane.showInputDialog(null, """
-					[1] FLUSSO DD CAIXA
+					[1] FLUSSO DE CAIXA
 					[2] CONTROLE DE ESTOQUE
 					[0] SAIR
 					""");
@@ -67,11 +67,16 @@ public class Main {
 							}
 							
 							case "2": {
+								
 								ProdutoServico.listProduto();
 								break;
 							}
 							
 							case "3": {
+								String codigo = JOptionPane.showInputDialog(null, "DIGITE O CODIGO DO PRODUTO A SER EDITADO");
+								String nome = JOptionPane.showInputDialog(null, "DIGITE UM NOVO NOME PARA O PRODUTO");
+								String preco = JOptionPane.showInputDialog(null, "DIGITE UM NOVO PREÇO PARA O PRODUTO");
+								ProdutoServico.editaProduto(codigo, nome, preco);
 								break;
 							}
 							

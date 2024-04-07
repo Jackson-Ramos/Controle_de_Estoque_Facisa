@@ -36,7 +36,20 @@ public class ProdutoServico {
 		JOptionPane.showMessageDialog(null, produtoList);
 	}
 	
-	public static void editaProduto(String nome,String preco) {
-	
+	public static void editaProduto(String codigo, String  nome, String preco) {
+		boolean produtoEncontrado = false;
+		
+		for (Produto produto : produtoList) {
+			if (produto.getCodigo().equals(codigo)) {
+				produto.setNome(nome);
+				produto.setPreco(preco);
+				produtoEncontrado = true;
+				break;
+			}
+		}
+		
+		if (!produtoEncontrado) {
+			JOptionPane.showMessageDialog(null, "Produto não encontrado!");
+		}
 	}
 }
