@@ -29,7 +29,7 @@ public class Main {
 				case "1": {
 					
 					
-					/*;
+					/*
 					AQUI VAI FICAR O FLUXO DE CAIXA
 					*/
 					
@@ -58,6 +58,7 @@ public class Main {
 								break;
 							}
 							
+							// Cadastra
 							case "1": {
 								String nome = JOptionPane.showInputDialog(null, "DIGITE O NOME DO PRODUTO");
 								String codigo = JOptionPane.showInputDialog(null, "DIGITE O CÓDIGO DO PRODUTO");
@@ -66,12 +67,14 @@ public class Main {
 								break;
 							}
 							
+							//Listar
 							case "2": {
 								
 								ProdutoServico.listProduto();
 								break;
 							}
 							
+							//Editar
 							case "3": {
 								String codigo = JOptionPane.showInputDialog(null, "DIGITE O CÓDIGO DO PRODUTO A SER EDITADO");
 								String nome = JOptionPane.showInputDialog(null, "DIGITE UM NOVO NOME PARA O PRODUTO");
@@ -80,13 +83,17 @@ public class Main {
 								break;
 							}
 							
+							// Remover
 							case "4": {
 								String codigo = JOptionPane.showInputDialog(null, "DIGITE O CÓDIGO DO PRODUTO A SER EDITADO");
 								ProdutoServico.removeProduto(codigo);
 								break;
 							}
 							
+							// Vender
 							case "5": {
+								
+								
 								break;
 							}
 						}
