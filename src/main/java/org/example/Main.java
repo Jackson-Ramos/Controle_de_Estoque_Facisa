@@ -43,8 +43,8 @@ public class Main {
 					while (opcaoEstoque != "0") {
 						
 						opcaoEstoque = JOptionPane.showInputDialog(null, """
-								[1] CADASTRA PRODUTO
-								[2] LISTA PRODUTOS
+								[1] CADASTRAR
+								[2] LISTAR
 								[3] EDITAR
 								[4] APAGAR
 								[5] VENDER
@@ -60,7 +60,7 @@ public class Main {
 							
 							case "1": {
 								String nome = JOptionPane.showInputDialog(null, "DIGITE O NOME DO PRODUTO");
-								String codigo = JOptionPane.showInputDialog(null, "DIGITE O CODIGO DO PRODUTO");
+								String codigo = JOptionPane.showInputDialog(null, "DIGITE O CÓDIGO DO PRODUTO");
 								String preco = JOptionPane.showInputDialog(null, "DIGITE O PREÇO DO PRODUTO");
 								ProdutoServico.CadastraProdutoList(nome, codigo, preco);
 								break;
@@ -73,7 +73,7 @@ public class Main {
 							}
 							
 							case "3": {
-								String codigo = JOptionPane.showInputDialog(null, "DIGITE O CODIGO DO PRODUTO A SER EDITADO");
+								String codigo = JOptionPane.showInputDialog(null, "DIGITE O CÓDIGO DO PRODUTO A SER EDITADO");
 								String nome = JOptionPane.showInputDialog(null, "DIGITE UM NOVO NOME PARA O PRODUTO");
 								String preco = JOptionPane.showInputDialog(null, "DIGITE UM NOVO PREÇO PARA O PRODUTO");
 								ProdutoServico.editaProduto(codigo, nome, preco);
