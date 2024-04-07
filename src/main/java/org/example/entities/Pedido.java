@@ -11,6 +11,7 @@ public class Pedido {
 	private List<Produto> pedidos;
 	private Double valorPedido;
 	
+	// Contrutor
 	public Pedido(List<Produto> pedidos, Double valorPedido) {
 		this.codigo = codigoSequencial.incrementAndGet();
 		this.pedidos = pedidos;
@@ -38,6 +39,7 @@ public class Pedido {
 		this.valorPedido = valorPedido;
 	}
 	
+	//Equals
 	@Override
 	public boolean equals(Object o) {
 		if (this == o)
@@ -48,12 +50,14 @@ public class Pedido {
 		return Objects.equals(codigo, pedido.codigo) && Objects.equals(pedidos, pedido.pedidos)
 				&& Objects.equals(valorPedido, pedido.valorPedido);
 	}
-
+	
+	//HashCode
 	@Override
 	public int hashCode() {
 		return Objects.hash(codigo, pedidos, valorPedido);
 	}
-
+	
+	//	ToString
 	@Override
 	public String toString() {
 		return "Pedido{" + "codigo=" + codigo + ", pedidos=" + pedidos + ", valorPedido=" + valorPedido + '}';
