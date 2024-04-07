@@ -7,21 +7,21 @@ import javax.swing.*;
 public class Main {
 	public static void main(String[] args) {
 		
-		String ops = "10";
-		while (ops != "0") {
+		String opcao = "10";
+		while (opcao != "0") {
 			
-			ops = JOptionPane.showInputDialog(null, """
-					[1] FLUSSO DE CAIXA
+			opcao = JOptionPane.showInputDialog(null, """
+					[1] FLUXO DE CAIXA
 					[2] CONTROLE DE ESTOQUE
 					[0] SAIR
 					""");
 			
-			switch (ops) {
+			switch (opcao) {
 				
 				case "0": {
 					
 					JOptionPane.showMessageDialog(null, "OBRIGADO POR USAR NOSSO SISTEMA!!!");
-					ops = "0";
+					opcao = "0";
 					break;
 					
 				}
@@ -30,7 +30,7 @@ public class Main {
 					
 					
 					/*;
-					AQUI VAI FICAR O FLUSSO DD CAIXA
+					AQUI VAI FICAR O FLUXO DD CAIXA
 					*/
 					
 					
@@ -39,10 +39,10 @@ public class Main {
 				
 				case "2": {
 					
-					String opsEstoque = "10";
-					while (opsEstoque != "0") {
+					String opcaoEstoque = "10";
+					while (opcaoEstoque != "0") {
 						
-						opsEstoque = JOptionPane.showInputDialog(null, """
+						opcaoEstoque = JOptionPane.showInputDialog(null, """
 								[1] CADASTRA PRODUTO
 								[2] LISTA PRODUTOS
 								[3] EDITAR
@@ -51,10 +51,10 @@ public class Main {
 								[0] VOLTAR
 								""");
 						
-						switch (opsEstoque) {
+						switch (opcaoEstoque) {
 							
 							case "0": {
-								opsEstoque = "0";
+								opcaoEstoque = "0";
 								break;
 							}
 							
