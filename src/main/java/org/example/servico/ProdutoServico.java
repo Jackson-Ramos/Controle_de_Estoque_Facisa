@@ -11,9 +11,9 @@ public class ProdutoServico {
 	private static List<Produto> produtoList = new ArrayList<>();
 	
 	//	Cadastra
-	public static void CadastraProdutoList(String nome, String codigo, String preco) {
+	public static void CadastraProdutoList(String nome, String codigo, Double preco, Long quantidade) {
 		
-		Produto produto = new Produto(nome, codigo, preco);
+		Produto produto = new Produto(nome, codigo, preco, quantidade);
 		boolean produtoExiste = false;
 		
 		for (Produto produtos : produtoList) {
@@ -28,7 +28,7 @@ public class ProdutoServico {
 			JOptionPane.showMessageDialog(null, "Produto cadastrado com sucesso!");
 		} else {
 			JOptionPane.showMessageDialog(null,
-					"O produto que será adicionado já foi cadastrado. Por favor, insira um novo\n" + "produto!");
+					  "O produto que será adicionado já foi cadastrado. Por favor, insira um novo\n" + "produto!");
 		}
 	}
 	
@@ -38,13 +38,14 @@ public class ProdutoServico {
 	}
 	
 	//Editar
-	public static void editaProduto(String codigo, String nome, String preco) {
+	public static void editaProduto(String codigo, String nome, Double preco, Long quantidade) {
 		boolean produtoEncontrado = false;
 		
 		for (Produto produto : produtoList) {
 			if (produto.getCodigo().equals(codigo)) {
 				produto.setNome(nome);
 				produto.setPreco(preco);
+				produto.setQuatidade(quantidade);
 				produtoEncontrado = true;
 				break;
 			}

@@ -6,27 +6,17 @@ public class Produto {
 	
 	private String nome;
 	private String codigo;
-	private String preco;
+	private Double preco;
+	private Long quatidade;
 	
-	public Produto(String nome, String codigo, String preco) {
+	public Produto(String nome, String codigo, Double preco, Long quatidade) {
 		this.nome = nome;
 		this.codigo = codigo;
 		this.preco = preco;
+		this.quatidade = quatidade;
 	}
 	
 	public Produto() {
-	}
-	
-	public String getPreco() {
-		return preco;
-	}
-	
-	public void setPreco(String preco) {
-		this.preco = preco;
-	}
-	
-	public String getCodigo() {
-		return codigo;
 	}
 	
 	public String getNome() {
@@ -37,12 +27,28 @@ public class Produto {
 		this.nome = nome;
 	}
 	
-	@Override
-	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
-		Produto produto = (Produto) o;
-		return Objects.equals(codigo, produto.codigo);
+	public String getCodigo() {
+		return codigo;
+	}
+	
+	public void setCodigo(String codigo) {
+		this.codigo = codigo;
+	}
+	
+	public Double getPreco() {
+		return preco;
+	}
+	
+	public void setPreco(Double preco) {
+		this.preco = preco;
+	}
+	
+	public Long getQuatidade() {
+		return quatidade;
+	}
+	
+	public void setQuatidade(Long quatidade) {
+		this.quatidade = quatidade;
 	}
 	
 	@Override
@@ -55,7 +61,8 @@ public class Produto {
 		return "Produto\n" +
 				"nome: '" + nome + "\n" +
 				" codigo: " + codigo + "\n" +
-				" preco: " + preco + "\n";
+				" preco: " + preco + "\n"+
+				"quantidade" + quatidade;
 	}
 }
 

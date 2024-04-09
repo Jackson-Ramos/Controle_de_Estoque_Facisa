@@ -1,11 +1,17 @@
 package org.example;
 
+import org.example.entities.Produto;
 import org.example.servico.ProdutoServico;
 
 import javax.swing.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
+	
 	public static void main(String[] args) {
+		
+		
 		
 		String opcao = "10";
 		while (opcao != "0") {
@@ -63,7 +69,8 @@ public class Main {
 								String nome = JOptionPane.showInputDialog(null, "DIGITE O NOME DO PRODUTO");
 								String codigo = JOptionPane.showInputDialog(null, "DIGITE O CÓDIGO DO PRODUTO");
 								String preco = JOptionPane.showInputDialog(null, "DIGITE O PREÇO DO PRODUTO");
-								ProdutoServico.CadastraProdutoList(nome, codigo, preco);
+								String quantidade = JOptionPane.showInputDialog(null, "DIGITE QUANTAS UNIDADES VAI POR NO ESTOQUE");
+								ProdutoServico.CadastraProdutoList(nome, codigo, Double.parseDouble(preco), Long.parseLong(quantidade));
 								break;
 							}
 							
@@ -79,13 +86,14 @@ public class Main {
 								String codigo = JOptionPane.showInputDialog(null, "DIGITE O CÓDIGO DO PRODUTO A SER EDITADO");
 								String nome = JOptionPane.showInputDialog(null, "DIGITE UM NOVO NOME PARA O PRODUTO");
 								String preco = JOptionPane.showInputDialog(null, "DIGITE UM NOVO PREÇO PARA O PRODUTO");
-								ProdutoServico.editaProduto(codigo, nome, preco);
+								String quantidade = JOptionPane.showInputDialog(null, "DIGITE A NOVA QUANTIDADE DO PRODUTO");
+								ProdutoServico.editaProduto(codigo, nome, Double.parseDouble(preco), Long.parseLong(quantidade));
 								break;
 							}
 							
 							// Remover
 							case "4": {
-								String codigo = JOptionPane.showInputDialog(null, "DIGITE O CÓDIGO DO PRODUTO A SER EDITADO");
+								String codigo = JOptionPane.showInputDialog(null, "DIGITE O CÓDIGO DO PRODUTO A SER REMOVIDO");
 								ProdutoServico.removeProduto(codigo);
 								break;
 							}
