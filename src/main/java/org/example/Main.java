@@ -1,6 +1,7 @@
 package org.example;
 
 import org.example.entities.Produto;
+import org.example.servico.PedidosService;
 import org.example.servico.ProdutoServico;
 
 import javax.swing.*;
@@ -100,8 +101,8 @@ public class Main {
 							
 							// Vender
 							case "5": {
-								
-								
+								String codigo = JOptionPane.showInputDialog(null, "DIGITE O CÓDIGO DO PRODUTO A SER COMPRADO:");
+								PedidosService.vender(codigo);
 								break;
 							}
 						}
