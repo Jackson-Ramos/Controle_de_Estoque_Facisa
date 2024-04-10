@@ -18,6 +18,11 @@ public class PedidosService {
 			if (produto.getCodigo().equals(codigo)) {
 				produto.setQuatidade(quantidade);
 				listaProdutos.add(produto);
+				for (Produto produto1 : listaProdutos) {
+					if (produto1.getCodigo().equals(codigo)) {
+						produto1.setQuatidade(quantidade);
+					}
+				}
 				produtoEncontrado = true;
 				break;
 			}
@@ -34,8 +39,8 @@ public class PedidosService {
 	
 	public void finalizar() {
 		double valorTotal = 0;
-		for(Produto produto : listaProdutos){
-			valorTotal += (produto.getPreco()*produto.getQuatidade());
+		for (Produto produto : listaProdutos) {
+			valorTotal += (produto.getPreco() * produto.getQuatidade());
 		}
 		Pedido pedido = new Pedido(listaProdutos, valorTotal);
 		listaPedidos.add(pedido);
