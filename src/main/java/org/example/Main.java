@@ -34,10 +34,45 @@ public class Main {
 				
 				case "1": {
 					
-					
-					/*
-					AQUI VAI FICAR O FLUXO DE CAIXA
-					*/
+					String opcaoFluxo = "10";
+					while (opcaoFluxo != "0") {
+						opcaoFluxo = JOptionPane.showInputDialog(null, """
+											[1] ADICIONAR PRODUTO
+											[2] CARRINHO
+											[3] FINALIZAR PEDIDO
+											[4] PEDIDOS FINALIZADOS
+											[0] VOLTAR
+											""");
+						
+						switch (opcaoFluxo) {
+							
+							case "0": {
+								opcaoFluxo = "0";
+								break;
+							}
+							
+							case "1": {
+								String codigo = JOptionPane.showInputDialog(null, "DIGITE O CÓDIGO DO PRODUTO A SER COMPRADO:");
+								String quantidade = JOptionPane.showInputDialog(null, "DIGITE A QUANTIDADE QUE VOCÊ DESEJA COMPRAR:");
+								PedidosService.vender(codigo, Long.parseLong(quantidade));
+								break;
+							}
+							
+							case "2": {
+								PedidosService.carrinho();
+								break;
+							}
+							case "3": {
+								PedidosService.finalizar();
+								break;
+							}
+							
+							case "4":{
+								PedidosService.pedidosFinalizados();
+								break;
+							}
+						}
+					}
 					
 					
 					break;
@@ -53,7 +88,6 @@ public class Main {
 								[2] LISTAR
 								[3] EDITAR
 								[4] APAGAR
-								[5] VENDER
 								[0] VOLTAR
 								""");
 						
@@ -98,36 +132,6 @@ public class Main {
 								break;
 							}
 							
-							// Vender
-							case "5": {
-								String opcaoVender = "10";
-								while (opcaoVender != "0") {
-									opcaoVender = JOptionPane.showInputDialog(null, """
-											[1] ADICIONAR PRODUTO
-											[2] CARRINHO
-											[3] FINALIZAR PEDIDO
-											[0] VOLTAR
-											""");
-									
-									switch (opcaoVender) {
-										case "0": {
-											opcaoVender = "0";
-											break;
-										}
-										case "1": {
-											String codigo = JOptionPane.showInputDialog(null, "DIGITE O CÓDIGO DO PRODUTO A SER COMPRADO:");
-											String quantidade = JOptionPane.showInputDialog(null, "DIGITE A QUANTIDADE QUE VOCÊ DESEJA COMPRAR:");
-											PedidosService.vender(codigo, Long.parseLong(quantidade));
-											break;
-										}
-										case "2": {
-											PedidosService.carrinho();
-										}
-									}
-								}
-								
-								break;
-							}
 						}
 					}
 				}

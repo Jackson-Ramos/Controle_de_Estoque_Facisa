@@ -34,6 +34,10 @@ public class ProdutoServico {
 	
 	// Listar
 	public static void listProduto() {
+		if(produtoList.isEmpty()) {
+			JOptionPane.showMessageDialog(null, "Nenhum produto encontrado!");
+		}
+		else
 		JOptionPane.showMessageDialog(null, produtoList);
 	}
 	

@@ -60,6 +60,9 @@ public class Pedido {
 	//	ToString
 	@Override
 	public String toString() {
-		return "Pedido{" + "codigo=" + codigo + ", pedidos=" + pedidos + ", valorPedido=" + valorPedido + '}';
+		return "Pedido:\n" +
+				"codigo: " + codigo + "\n"+
+				", pedidos: " + pedidos.toString() + "\n"+
+				", valor do Pedido: " + valorPedido;
 	}
 }
