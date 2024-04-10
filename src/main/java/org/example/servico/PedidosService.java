@@ -16,7 +16,6 @@ public class PedidosService {
 		
 		for (Produto produto : ProdutoServico.produtoList) {
 			if (produto.getCodigo().equals(codigo)) {
-				produto.setQuatidade(quantidade);
 				listaProdutos.add(produto);
 				for (Produto produto1 : listaProdutos) {
 					if (produto1.getCodigo().equals(codigo)) {
