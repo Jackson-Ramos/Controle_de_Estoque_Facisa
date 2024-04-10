@@ -61,8 +61,8 @@ public class Produto {
 		return "Produto\n" +
 				"nome: '" + nome + "\n" +
 				" codigo: " + codigo + "\n" +
-				" preco: " + preco + "\n"+
-				"quantidade" + quatidade;
+				" preco: " + preco + "\n" +
+				"quantidade: " + quatidade + "\n";
 	}
 }
 

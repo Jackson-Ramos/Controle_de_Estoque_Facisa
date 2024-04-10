@@ -13,7 +13,6 @@ public class Main {
 	public static void main(String[] args) {
 		
 		
-		
 		String opcao = "10";
 		while (opcao != "0") {
 			
@@ -101,8 +100,32 @@ public class Main {
 							
 							// Vender
 							case "5": {
-								String codigo = JOptionPane.showInputDialog(null, "DIGITE O CÓDIGO DO PRODUTO A SER COMPRADO:");
-								PedidosService.vender(codigo);
+								String opcaoVender = "10";
+								while (opcaoVender != "0") {
+									opcaoVender = JOptionPane.showInputDialog(null, """
+											[1] ADICIONAR PRODUTO
+											[2] CARRINHO
+											[3] FINALIZAR PEDIDO
+											[0] VOLTAR
+											""");
+									
+									switch (opcaoVender) {
+										case "0": {
+											opcaoVender = "0";
+											break;
+										}
+										case "1": {
+											String codigo = JOptionPane.showInputDialog(null, "DIGITE O CÓDIGO DO PRODUTO A SER COMPRADO:");
+											String quantidade = JOptionPane.showInputDialog(null, "DIGITE A QUANTIDADE QUE VOCÊ DESEJA COMPRAR:");
+											PedidosService.vender(codigo, Long.parseLong(quantidade));
+											break;
+										}
+										case "2": {
+											PedidosService.carrinho();
+										}
+									}
+								}
+								
 								break;
 							}
 						}

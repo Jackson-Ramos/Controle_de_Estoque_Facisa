@@ -8,7 +8,7 @@ import java.util.List;
 
 public class ProdutoServico {
 	
-	private static List<Produto> produtoList = new ArrayList<>();
+	public static List<Produto> produtoList = new ArrayList<>();
 	
 	//	Cadastra
 	public static void CadastraProdutoList(String nome, String codigo, Double preco, Long quantidade) {
@@ -28,7 +28,7 @@ public class ProdutoServico {
 			JOptionPane.showMessageDialog(null, "Produto cadastrado com sucesso!");
 		} else {
 			JOptionPane.showMessageDialog(null,
-					  "O produto que será adicionado já foi cadastrado. Por favor, insira um novo\n" + "produto!");
+					"O produto que será adicionado já foi cadastrado. Por favor, insira um novo\n" + "produto!");
 		}
 	}
 	
