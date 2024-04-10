@@ -16,12 +16,14 @@ public class PedidosService {
 		
 		for (Produto produto : ProdutoServico.produtoList) {
 			if (produto.getCodigo().equals(codigo)) {
-				listaProdutos.add(produto);
-				for (Produto produto1 : listaProdutos) {
-					if (produto1.getCodigo().equals(codigo)) {
-						produto1.setQuatidade(quantidade);
-					}
-				}
+				Produto produtoVendido = new Produto(
+						produto.getNome(),
+						produto.getCodigo(),
+						produto.getPreco(),
+						produto.getQuatidade()
+						);
+				produtoVendido.setQuatidade(quantidade);
+				listaProdutos.add(produtoVendido);
 				produtoEncontrado = true;
 				break;
 			}
