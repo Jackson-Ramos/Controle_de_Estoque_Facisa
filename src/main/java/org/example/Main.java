@@ -66,7 +66,7 @@ public class Main {
 							
 							// Cadastra
 							case "1": {
-								String nome = JOptionPane.showInputDialog(null, "DIGITE O NOME DO PRODUTO");
+								String nome = JOptionPane.showInputDialog(null, "DIGITE O NOME DO PRODUTO:");
 								String codigo = JOptionPane.showInputDialog(null, "DIGITE O CÓDIGO DO PRODUTO");
 								String preco = JOptionPane.showInputDialog(null, "DIGITE O PREÇO DO PRODUTO");
 								String quantidade = JOptionPane.showInputDialog(null, "DIGITE QUANTAS UNIDADES VAI POR NO ESTOQUE");
