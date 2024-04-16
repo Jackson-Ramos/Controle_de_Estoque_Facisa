@@ -51,9 +51,18 @@ public class Produto {
 		this.quatidade = quatidade;
 	}
 	
+	
+	@Override
+	public boolean equals(Object o) {
+		if (this == o) return true;
+		if (o == null || getClass() != o.getClass()) return false;
+		Produto produto = (Produto) o;
+		return Objects.equals(codigo, produto.codigo);
+	}
+	
 	@Override
 	public int hashCode() {
-		return Objects.hash(codigo);
+		return Objects.hashCode(codigo);
 	}
 	
 	@Override
