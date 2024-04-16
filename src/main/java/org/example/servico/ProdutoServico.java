@@ -17,7 +17,7 @@ public class ProdutoServico {
 		boolean produtoExiste = false;
 		
 		for (Produto produtos : produtoList) {
-			if (produtos.equals(produto)) {
+			if (produtos.equals(produto) || produtos.getNome().equals(produtos.getNome())) {
 				produtoExiste = true;
 				break;
 			}
