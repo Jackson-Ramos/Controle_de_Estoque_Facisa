@@ -137,6 +137,7 @@ public class Main {
 							}
 						}
 					}
+					break;
 				}
 				default: {
 					JOptionPane.showMessageDialog(null, "OPÇÃO DIGITADA INVALIDA POR FAVOR TENTE NOVAMENTE.");
