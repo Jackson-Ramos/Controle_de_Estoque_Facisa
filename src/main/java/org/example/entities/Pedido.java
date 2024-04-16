@@ -1,7 +1,7 @@
 package org.example.entities;
 
-import javax.annotation.processing.Generated;
-import java.util.*;
+import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.atomic.AtomicLong;
 
 public class Pedido {
@@ -61,8 +61,8 @@ public class Pedido {
 	@Override
 	public String toString() {
 		return "Pedido:\n" +
-				"codigo: " + codigo + "\n"+
-				", pedidos: " + pedidos.toString() + "\n"+
+				"codigo: " + codigo + "\n" +
+				", pedidos: " + pedidos + "\n" +
 				", valor do Pedido: " + valorPedido;
 	}
 }

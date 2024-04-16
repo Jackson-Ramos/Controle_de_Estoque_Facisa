@@ -37,12 +37,12 @@ public class Main {
 					String opcaoFluxo = "10";
 					while (opcaoFluxo != "0") {
 						opcaoFluxo = JOptionPane.showInputDialog(null, """
-											[1] ADICIONAR PRODUTO
-											[2] CARRINHO
-											[3] FINALIZAR PEDIDO
-											[4] PEDIDOS FINALIZADOS
-											[0] VOLTAR
-											""");
+								[1] ADICIONAR PRODUTO
+								[2] CARRINHO
+								[3] FINALIZAR PEDIDO
+								[4] PEDIDOS FINALIZADOS
+								[0] VOLTAR
+								""");
 						
 						switch (opcaoFluxo) {
 							
@@ -67,9 +67,13 @@ public class Main {
 								break;
 							}
 							
-							case "4":{
+							case "4": {
 								PedidosService.pedidosFinalizados();
 								break;
+							}
+							
+							default: {
+								JOptionPane.showMessageDialog(null, "OPÇÃO DIGITADA INVALIDA POR FAVOR TENTE NOVAMENTE.");
 							}
 						}
 					}
@@ -132,10 +136,18 @@ public class Main {
 								break;
 							}
 							
+							default: {
+								JOptionPane.showMessageDialog(null, "OPÇÃO DIGITADA INVALIDA POR FAVOR TENTE NOVAMENTE.");
+							}
+							
 						}
+						
+						
 					}
 				}
-				
+				default: {
+					JOptionPane.showMessageDialog(null, "OPÇÃO DIGITADA INVALIDA POR FAVOR TENTE NOVAMENTE.");
+				}
 			}
 		}
 	}
