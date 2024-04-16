@@ -13,7 +13,7 @@ public class PedidosService {
 	
 	public static void vender(String codigo, Long quantidade) {
 		boolean produtoEncontrado = false;
-		
+		int nv = 0;
 		for (Produto produto : ProdutoServico.produtoList) {
 			if (ProdutoServico.produtoList.isEmpty()) {
 				JOptionPane.showMessageDialog(null, """
@@ -28,6 +28,7 @@ public class PedidosService {
 							produto.getQuatidade()
 					);
 					produtoVendido.setQuatidade(quantidade);
+					produto.setQuatidade(produto.getQuatidade() - quantidade);
 					listaProdutos.add(produtoVendido);
 					produtoEncontrado = true;
 					break;
