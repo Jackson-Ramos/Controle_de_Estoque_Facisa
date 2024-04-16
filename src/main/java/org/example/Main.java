@@ -25,11 +25,9 @@ public class Main {
 			switch (opcao) {
 				
 				case "0": {
-					
 					JOptionPane.showMessageDialog(null, "OBRIGADO POR USAR NOSSO SISTEMA!!!");
 					opcao = "0";
 					break;
-					
 				}
 				
 				case "1": {
@@ -77,8 +75,6 @@ public class Main {
 							}
 						}
 					}
-					
-					
 					break;
 				}
 				
@@ -139,10 +135,7 @@ public class Main {
 							default: {
 								JOptionPane.showMessageDialog(null, "OPÇÃO DIGITADA INVALIDA POR FAVOR TENTE NOVAMENTE.");
 							}
-							
 						}
-						
-						
 					}
 				}
 				default: {
